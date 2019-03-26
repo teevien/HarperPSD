@@ -1,0 +1,19 @@
+.header__blog {
+    min-height:80vh;
+    background: url('../../../assets\ copy/blog-image-1.jpg');
+    background-position:center;
+    background-size: cover;
+    position: relative;
+
+    h2 {
+        @include headerFont(10rem);
+        position: absolute;
+        bottom:-50px;
+        left:100px;
+        
+        @media (max-width:500px) {
+            left:0;
+            // border:1px solid red;
+        }
+    };
+};

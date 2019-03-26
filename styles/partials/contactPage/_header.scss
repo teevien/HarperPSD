@@ -1,0 +1,19 @@
+.header__contact {
+    background: url('../../../assets\ copy/contact-image-1.jpg');
+    background-size:cover;
+    background-position:center;
+    min-height:80vh;
+    position:relative;
+    
+    h2 {
+        margin:0;
+        @include headerFont(10rem);
+        position: absolute;
+        bottom:-50px;
+        left:100px;
+
+        @media (max-width:500px) {
+            left:0;
+        }
+    };
+};

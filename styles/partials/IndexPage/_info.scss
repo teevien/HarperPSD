@@ -1,0 +1,21 @@
+.info {
+    background: $off-white;
+    padding:10rem 0;
+
+    .info__flexbox {
+        display:flex;
+        flex-wrap: wrap;
+
+        .info__box {
+            width:calc(50% - 15px);
+            margin-left:15px;
+            padding: $s-size;
+            // border:1px solid red;
+
+            @media (max-width:700px) {
+                width:100%;
+                text-align:center;
+            };
+        };
+    };
+};

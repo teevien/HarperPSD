@@ -1,0 +1,97 @@
+.header__index {
+    background: $light-blue;
+    min-height:80vh;
+
+    @media (min-width:820px) and (max-width:959px) {
+        padding-right:350px;
+        padding-top: 8%;
+    };
+
+    @media (min-width:600px) and (max-width:819px) {
+        padding-right:330px;
+        padding-top: 15%;
+    };
+
+    @media (min-width:551px) and (max-width: 599px) {
+        padding-right:330px;
+        padding-top:15%;
+    };
+
+    @media (max-width:550px) {
+        padding-right:330px;
+        padding-top:20%;
+    };
+
+    .header__title {
+        width:35%;
+        float:right;
+        margin: 15% 15% 0 0 ;
+        position:relative;
+
+        img {
+            position:absolute;
+            top:-5vmin;
+            right:0;
+
+            @media (min-width:1162px) and (max-width:1264px) {
+                margin-right:-30px;
+            };
+
+            @media (min-width:1062px) and (max-width:1161px) {
+                margin-right: -60px;
+            };
+
+            @media (min-width:960px) and (max-width: 1061px) {
+                margin-right:-90px;
+            };
+
+            @media (min-width:820px) and (max-width: 959px) {
+                margin-right:-240px;
+            };
+
+            @media (min-width:600px) and (max-width:819px) {
+                margin-right:-300px;
+            };
+
+            @media (min-width:551px) and (max-width: 599px) {
+                margin-right: -330px;
+            };
+
+            @media (max-width:550px) {
+                margin-right:-330px;
+            }
+        
+         };
+    };
+
+    .header__image {
+        width:28vmax;
+        z-index:1;  
+        position:absolute;
+        bottom:30px;
+        // left:0;
+        @media (min-width: 960px) and (max-width:1061px) {
+            margin-bottom:30px;
+        };
+
+        @media (min-width:820px) and (max-width:959px) {
+            margin-bottom: -350px;
+            margin-left: 50px;
+        };
+
+        @media (min-width:600px) and (max-width: 819px) {
+            margin-bottom: -300px;
+            margin-left:30px;
+        };
+
+        @media (max-width:700px) {
+            display:none;
+        };
+
+        img {
+            max-width:100%;
+            display:block;
+            box-shadow:15px 15px $white;
+        };
+    };
+};

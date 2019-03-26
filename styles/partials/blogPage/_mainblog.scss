@@ -1,0 +1,209 @@
+.blog {
+    padding: 10rem 0;
+    background: $off-white;
+
+    .blog__main, .blog__aside {
+        float:right;
+        > div {
+            background: $white;
+            padding: $l-size;
+            margin-bottom: $xl-size;
+        };
+    };
+
+
+    // Blog Aside
+    .blog__aside {
+        margin-right:10rem;
+        width:calc(35% - 5rem);
+
+        @media (max-width:1196px) {
+            margin-right:$l-size;
+            padding:$s-size;
+            width:calc(50% - 5rem);
+        }
+
+        @media (max-width:967px) {
+            width:100%;
+            margin-right:0;
+            margin-top:$m-size;
+        };
+
+        // about
+        > div:first-child {
+            margin-bottom: $xl-size;
+            
+            @media(max-width:967px) {
+                width:70%;
+                float:left;
+            };
+
+            @media (max-width:940px) {
+                display:flex;
+                flex-wrap: wrap;
+            };
+
+            @media (max-width:768px) {
+                width:100%;
+            };
+
+            > div {
+                @media (max-width: 940px) {
+                    width:calc(50% - 20px);
+                }
+
+                // harper image
+                &:first-child {
+                    @media (max-width:600px) {
+                        margin-top:$xl-size;
+                    }
+
+                    @media (max-width:480px) {
+                        width:100%;
+                    }
+                }
+
+                // content
+                &:last-child {
+                    @media (max-width:940px) {
+                        margin-left: $m-size;
+                    };
+
+                    @media (max-width: 768px) {
+                        margin-top: $m-size;
+                    };
+
+                    @media (max-width:480px) {
+                        width:100%;
+                        margin:0;
+                    };
+                }
+            }
+
+            img {
+                width:100%;
+                margin-bottom:$l-size;
+            };
+        };
+
+        // recent posts
+        > div:last-child {
+            @media (max-width:967px) {
+                width:calc(30% - 25px);
+                float:left;
+                padding:$m-size;
+                margin-left:$m-size;
+            }
+
+            @media (max-width:768px) {
+                width:100%;
+                margin-left:0;
+                text-align:center;
+            };
+
+            @media (max-width:480px) {
+                text-align:left;
+            }
+
+             ul {
+                margin:0;
+                padding:0 0 0 $s-size;
+
+                li {
+                    margin-top:$m-size;
+                };
+            };
+        };
+    };
+
+    // Blog Main
+    .blog__main {
+        width:60%;
+        margin-left: auto;
+
+        @media(max-width:1196px) {
+            width:50%;
+        }
+
+        @media(max-width:967px) {
+            width:100%;
+        }
+
+        .blog__comment {
+            display:flex;
+
+            @media (max-width:967px) {
+                width:calc(50% - 10px);
+                float:left;
+                margin-left:10px;
+                padding:$s-size;
+            };
+
+            @media (max-width:768px) {
+                width:100%;
+            };
+
+            .blog__comment__image {
+                width:20%;
+                margin-right:$l-size;
+         
+                img {
+                    width:100%;
+                    display:block;
+                    padding-top:$l-size;
+                };
+            };
+
+            .blog__comment__text {
+                width:70%;
+            };
+        };
+
+        // Blog Main -> Form
+        .blog__form {
+            input, textarea, button {
+                padding:10px 15px;
+                border:none;
+                &::placeholder {
+                    font-family: $baseFont;
+                };
+            };
+
+            textarea, button {
+                width:100%;
+                margin-top: $s-size;
+            };
+
+            .blog__form__input {
+                width:50%;
+
+                @media (max-width:600px) {
+                    width:100%;
+                }
+            };
+
+            .blog__form__input--email {
+                width:calc(50% - 2.4rem);
+                float:right;
+                margin-left:$m-size;
+
+                @media (max-width:600px) {
+                    width:100%;
+                    margin-left:0;
+                    margin-top:$s-size;
+                };
+            };
+
+            textarea {
+                resize:none;
+                height:150px;
+            };
+
+            button {
+                background: $pink;
+                font-family: $headingFont;
+                text-transform: uppercase;
+            };
+        };
+    };
+};

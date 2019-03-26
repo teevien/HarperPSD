@@ -1,0 +1,209 @@
+nav {
+    background: $light-blue;
+}
+
+.menu-toggle__sr-only, .main-menu__sr-only {
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin: -1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0,);
+    border:0;
+}
+
+.menu-toggle {
+    display:inline-block;
+    padding: .75em 15px;
+    line-height:1em;
+    font-size:3rem;
+    &:hover, &:focus {
+        color: $white;
+    };
+
+    @media(min-width:768px) {
+        display:none;
+    }
+};
+
+// Default Styles + Mobile First Offscreen menu style
+.main-menu {
+    position:absolute;
+    display:none;
+    left:-200px;
+    top:0;
+    height:100%;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+    box-shadow 0.3s ease;
+    z-index: 999;
+    position:fixed;
+
+    @media(min-width:768px) {
+        position:relative;
+        left:auto;
+        top:auto;
+        height:auto;
+        display:block;
+    };
+
+    a {
+        @media (min-width:768px) {
+            color:$black;
+            border:0
+        };
+    };
+
+    &:hover, &:focus {
+        @media(min-width: 768px) {
+            background:none; // remove bg from off-canvas styling;
+            color: $white;
+        };
+    };
+ 
+    &:target, &[aria-expanded="true"] {
+        display:block;
+        left:0;
+        outline:none;
+    }
+
+    &:target .main-menu__menu-close, 
+    &[aria-expanded="true"] .main-menu__menu-close {
+        z-index:1001;
+    }
+
+    &:target ul, &[aria-expanded="true"] ul {
+        position: relative;
+        z-index:1000;
+    }
+
+    &:target + .backdrop, 
+    &[aria-expanded="true"] + .backdrop {
+        position:absolute;
+        display:block;
+        lefT:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index:998;
+        background: rgba(0,0,0,0.8);
+        cursor:default;
+    }
+  
+    .menu {
+        list-style:none;
+        margin:0;
+        padding: 2.5em 0 0;   
+        min-height: 100%;
+        width: 200px;
+        background: $light-blue;
+        
+        @media (min-width:768px) {
+            display:flex;
+            justify-content: center;
+            // margin-left:50%;
+            // undo off-canvas styles
+            padding:0;
+            height:auto;
+            width:100%;
+            background:$light-blue;
+            // border:1px solid red;
+        }
+
+        .menu__item, .menu__item--big-text {
+            display:block;
+            padding: .75em 15px;
+            line-height:1em;
+            font-size:2.5rem;
+            a {
+                transition: 0.2s;
+                &:hover {
+                    color:$white;
+                };
+            };
+        };
+
+        .menu__item--big-text {
+            @media(min-width:768px) {
+                font-size:3rem;
+                padding-top:.5em;
+            }
+        }
+    };
+
+    .main-menu__menu-close {
+        position:absolute;
+        top:0;
+        right:$s-size;
+        
+        @media(min-width:768px) {
+            display:none;
+        };
+    };
+};
+
+
+// @supports(position:fixed) {
+//     .main-menu,
+//     .main-menu:target + .backdrop,
+//     .main-menu[aria-expanded="true"] + .backdrop {
+//         position:fixed;
+//     }
+// }
+
+// @supports(position:fixed) {
+//     .main-menu,
+//     .main-menu:target + .backdrop,
+//     .main-menu[aria-expanded="true"] + .backdrop {
+//         position:fixed;
+//     };
+// };
+
+// Larger Screen Styling, Horizontal menu
+// @media (min-width:768px) {
+//     .menu-toggle, 
+//     .main-menu .main-menu__menu-close {
+//         display:none;
+//     };
+
+    // .main-menu {
+    //     position:relative;
+    //     left:auto;
+    //     top:auto;
+    //     height:auto;
+    //     display:block;
+
+        // &:hover, &:focus {
+        //     background:none; // remove bg from off-canvas styling;
+        //     color: $white;
+        // };
+        
+        // .menu {
+        //     display:flex;
+        //     justify-content: center;
+        //     // undo off-canvas styles
+        //     padding:0;
+        //      -webkit-box-shadow: none;
+        //     -moz-box-shadow: none;
+        //     box-shadow: none;
+        //     height:auto;
+        //     width:auto;
+        //     background:$light-blue;
+
+        //     .menu__item--big-text {
+        //         font-size:3rem;
+        //         padding-top:.5em;
+        //     };
+        // };
+
+    //     a {
+    //         color: $black;
+    //         border:0; // remove borders from off-canvas styling
+    //     };
+    // };
+// };
+
+
+
+

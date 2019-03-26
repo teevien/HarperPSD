@@ -1,0 +1,41 @@
+.more-info {
+    background: $off-white;
+    padding: 10rem 0;
+
+    .more-info__box {
+        display:flex;
+
+        @media (max-width:650px) {
+            // border:1px solid red;
+        }
+        
+        .more-info__image {
+            margin: 0 auto;
+            width:25%;
+            
+            @media (max-width:768px) {
+                // border:1px solid red;
+                width:40%;
+            }
+
+            @media (max-width:650px) {
+                display:none;
+            }
+
+            img {
+                width:100%;
+                box-shadow: 15px 15px $navy-blue;
+            };
+        };
+
+        .more-info__content {
+            margin: 0 auto;
+            width:50%;
+
+            @media (max-width:650px) {
+                width:100%;
+                margin-left:$m-size;
+            }
+        };
+    };
+};

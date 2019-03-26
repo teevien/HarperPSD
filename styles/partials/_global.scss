@@ -1,0 +1,45 @@
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size:1.6rem;
+
+        .wrapper {
+            max-width:1280px;
+            width:85%;
+            margin:0 auto;
+
+            @media (max-width:940px) {
+                width:95%;
+            };
+
+            h2 {
+                @include headerFont(10rem);
+            };
+
+            h1 {
+                @include headerFont($l-size);
+            };
+
+            p {
+                @include baseFont(1.6rem);
+            };
+
+            a {
+                text-decoration:none;
+                color: $black;
+                font-family: $headingFont;
+                text-transform:uppercase;
+            };
+
+            .button {
+                background: $pink;
+                padding:10px 15px;
+            };
+        };
+
+        footer {
+                text-align:center;
+            };
+    };
+};
